@@ -13,6 +13,11 @@ int Min_Heap::find_parent(int idx)
     return (idx/2);
 }
 
+int Min_Heap::get_min()
+{
+    if(siz==1)return -1;
+    return arr[1];
+}
 void Min_Heap::move_down(int idx)
 {
     if(idx>=siz)return;
@@ -52,6 +57,7 @@ void Min_Heap::rem()
 {
     swap(arr[1],arr[siz-1]);
     arr[siz-1]=1e9;
+    siz--;
     move_down(1);
 }
 

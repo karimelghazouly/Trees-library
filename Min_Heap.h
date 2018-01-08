@@ -10,6 +10,7 @@ class Min_Heap
         void insrt(int);
         void rem();
         int find_parent(int);
+        int get_min();
         ~Min_Heap();
 
     protected:
